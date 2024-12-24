@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Beyaz Kuaför</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flaticon@4.0.0/css/flaticon.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+   
+    <!--Animasyon Kütüphanesi-->
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+ 
+    .typing {
+      font-family: 'Times New Roman', Times, serif;
+      color: #FFD700; /* Altın rengi */
+      font-size: 2.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0;
+      animation: typing 4s steps(30, end) infinite;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Beyaz arka plan */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    width: 80%; /* Galeriyi belli bir genişlikte sınırlıyoruz */
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 800px;
+    display: none; /* İlk başta sadece bir resim görünür olacak */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.gallery-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.gallery-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+    /*Galeri Animasyonu*/
+    /* Başlangıçta galeriler gizli olacak */
+.gallery-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 0.6s ease;
+}
+
+/* Görünür hale geldiklerinde animasyon başlayacak */
+.gallery-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-text {
+            display: inline-block;
+        }
+
+        .animated-text span {
+            display: inline-block;
+            color: black;
+            animation: colorChange 3s ease-in-out infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: black; }
+            50% { color: blue; }
+            100% { color: black; }
+        }
+
+        /* Her harf için gecikme süresi */
+        .animated-text span:nth-child(1) { animation-delay: 0.1s; }
+        .animated-text span:nth-child(2) { animation-delay: 0.2s; }
+        .animated-text span:nth-child(3) { animation-delay: 0.3s; }
+        .animated-text span:nth-child(4) { animation-delay: 0.4s; }
+        .animated-text span:nth-child(5) { animation-delay: 0.5s; }
+        .animated-text span:nth-child(6) { animation-delay: 0.6s; }
+        .animated-text span:nth-child(7) { animation-delay: 0.7s; }
+        .animated-text span:nth-child(8) { animation-delay: 0.8s; }
+        .animated-text span:nth-child(9) { animation-delay: 0.9s; }
+        .animated-text span:nth-child(10) { animation-delay: 1s; }
+        .animated-text span:nth-child(11) { animation-delay: 1.1s; }
+        .animated-text span:nth-child(12) { animation-delay: 1.2s; }
+        .animated-text span:nth-child(13) { animation-delay: 1.3s; }
+        .animated-text span:nth-child(14) { animation-delay: 1.4s; }
+        .animated-text span:nth-child(15) { animation-delay: 1.5s; }
+        .animated-text span:nth-child(16) { animation-delay: 1.6s; }
+        .animated-text span:nth-child(17) { animation-delay: 1.7s; }
+        .animated-text span:nth-child(18) { animation-delay: 1.8s; }
+        .animated-text span:nth-child(19) { animation-delay: 1.9s; }
+        .animated-text span:nth-child(20) { animation-delay: 2s; }
+        .animated-text span:nth-child(21) { animation-delay: 2.1s; }
+        .animated-text span:nth-child(22) { animation-delay: 2.2s; }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        /* Animasyon başlangıç stili */
+        .animate-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 2s ease-in-out;
+        }
+
+        /* Animasyon uygulanınca aktif stil */
+        .animate-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+        }
+
+        h3, h4 {
+            margin: 10px 0;
+        }
+
+        /* Kenarlık stili */
+        .border-box {
+            border: 2px groove black;
+            border-top-color: transparent;
+            padding: 15px;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+
+    </style>
+
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgb(252,252,255); /* Yedek arka plan rengi */
+    background: linear-gradient(0deg, rgba(252,252,255,0) 0%, rgba(0,0,0,0.6531862745098039) 31%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 88%);
+    " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" width="55px" height="55px" style="border-radius: 15px;" src="images/beyaz_logo_new.jpg" alt="" />
+            <span style="margin-left: 90px; font-size: large; font-size: 1.2rem; color: #fff; font-family: 'Times New Roman', Times, serif;">Hüseyin Yılmaz</span>
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#home">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Hizmetlerimiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#testimonials">Yorumlar</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	<section id="home" class="main-banner parallaxie"  style="background: url(images/beyaz_logo_new.jpg)">
+		<div class="heading">
+			<h1>Hüseyin Yılmaz, Kuaför </h1>
+			<p>"Her gelişinizde tarzınıza yenilik katın. <br>Bu sektöre yıllarını adayan, <b>Hüseyin Yılmaz</b>'ın kuaför salonuna randevuyu kaçırmayın!"</p>
+			<h3 class="cd-headline clip is-full-width">
+				<span>Herkesi kuaför salonumuza bekleriz.</span>
+				<span class="cd-words-wrapper">
+					<b class="is-visible">Hüseyin Yılmaz</b>
+					<b>Bayrampaşa/İstanbul</b>
+					<b>Beyaz Kuaför</b>
+					<b>(532) 761 39-77</b>
+				</span>
+			</h3>
+		</div>
+	</section>
+
+	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+        <path d="M-5 100 Q 0 20 5 100 Z
+            M0 100 Q 5 0 10 100
+            M5 100 Q 10 30 15 100
+            M10 100 Q 15 10 20 100
+            M15 100 Q 20 30 25 100
+            M20 100 Q 25 -10 30 100
+            M25 100 Q 30 10 35 100
+            M30 100 Q 35 30 40 100
+            M35 100 Q 40 10 45 100
+            M40 100 Q 45 50 50 100
+            M45 100 Q 50 20 55 100
+            M50 100 Q 55 40 60 100
+            M55 100 Q 60 60 65 100
+            M60 100 Q 65 50 70 100
+            M65 100 Q 70 20 75 100
+            M70 100 Q 75 45 80 100
+            M75 100 Q 80 30 85 100
+            M80 100 Q 85 20 90 100
+            M85 100 Q 90 50 95 100
+            M90 100 Q 95 25 100 100
+            M95 100 Q 100 15 105 100 Z">
+        </path>
+    </svg>
+
+    <div id="about" class="">
+        <div class="container"  style="background: rgb(252,252,255);
+background: linear-gradient(180deg, rgba(252,252,255,1) 15%, rgba(172,180,201,1) 29%, rgba(137,159,209,1) 57%, rgba(54,160,181,1) 99%);">
+              <div class="section-title text-left">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">                        
+                        <h2 style="color: coral; font-family: 'Times New Roman', Times, serif   ;" class="text-center">Hakkımızda</h2>
+                        <br>
+                        <p style="font-family: 'Times New Roman', Times, serif; color: black;">Beyaz kuaför [kuruluş yılı]’dan itibaren İstanbul Bayrampaşa’da hizmet vermektedir. Saç kesimi, Saç boyama, Saç ekimi, Cilt bakımı gibi hizmetleri sunmaktadır. Hüseyin Yılmaz’ın bu sektördeki yeteneği ile iyi bir müşteri kitlesine hitap etmektedir. </p>
+						<p style="font-family: 'Times New Roman', Times, serif; color: black;">İstanbul Bayrampaşa’da, Trikocular Caddesi’nin tam merkezinde, sizi kendinizi özel hissettirecek bir berber salonu arıyorsanız doğru yerdesiniz. Salonumuz Axis AVM’ye ve Maltepe metrosuna sadece birkaç dakika uzaklıktadır. Ulaşım kolaylığıyla her zaman ziyaret edebilirsiniz.</p>
+
+                        <a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>[Bu Tuş Silinecek]</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img src="images/beyaz_logo_new.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+    <div id="services" class="section lb">
+        <div class="container" style="background: rgb(252,252,255);
+        background: linear-gradient(180deg, rgba(252,252,255,1) 4%, rgba(154,198,214,1) 21%, rgba(66,168,189,1) 41%, rgba(54,160,181,1) 60%);
+        
+        ">
+         <div id="services" class="section lb">
+            <div class="container" style="background: rgb(252,252,255);
+            background: linear-gradient(180deg, rgba(252,252,255,1) 4%, rgba(154,198,214,1) 21%, rgba(66,168,189,1) 41%, rgba(54,160,181,1) 60%);">
+                <div class="section-title text-left">
+                    <br><br>
+                    <h1 style="font-family: 'Times New Roman', Times, serif; color: #6F42C1;" class="text-center typing">Tarzınızı Yansıtın!</h1>
+                    <p class="text-center" style="font-family: 'Times New Roman', Times, serif; font-size: medium;">Tarzınız, Karakteriniz</p>
+                </div><!-- end title -->
+        
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-scissors"></i>
+                            </div>
+                            <h2>Saç ve Sakal Kesimi</h2>
+                            <p>Saçınza yeni bir dokunuş getirin. Stil ve Renk değişiklikleri için doğru adrestesiniz.</p>
+                        </div>
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-paint-brush"></i>
+                            </div>
+                            <h2>Saç Boyama</h2>
+                            <p>Saçınızın renginden sıkıldınız mı? Yeni bir tarz için hemen Randevu alın.</p>
+                        </div>
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-chair"></i>
+                            </div>
+                            <h2>Saç Ekimi</h2>
+                            <p>Dökülen ve azalan saçlarınız için saç ekimini profesyonel yöntemlerle gerçekleştirin.</p>
+                        </div>
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-bath"></i>
+                            </div>
+                            <h2>Saç Bakımı</h2>
+                            <p>Saç dökülmesi, seyrekleşmesi gibi sorunlarla karşılaşmamak adına saçlarınızın bakımını aksatmayın</p>
+                        </div>
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-hand-paper"></i>
+                            </div>
+                            <h2>Cilt Bakımı</h2>
+                            <p>Cildiniz her zaman genç ve parlak kalsın. Randevu almayı unutmayın!</p>
+                        </div>
+                    </div><!-- end col -->
+                    
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="services-inner-box">
+                            <div class="ser-icon">
+                                <i class="fa fa-sun"></i>
+                            </div>
+                            <h2>Cilt Boyama</h2>
+                            <p>Cildinizin rengini eşitleyin ve mühteşem görüntüye ulaşın.</p>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+        
+        <!-- Initialize AOS -->
+        <script>
+            AOS.init();
+        </script>
+        
+         
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div id="portfolio" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3 class="text-center">Galeri</h3>
+                <p style="font-family: 'Times New Roman', Times, serif; color: black;">Deneyim ve Tecrübeler... Resimleri aşağıda kategorilenmiş olarak inceleyebilirsiniz.</p>
+            </div><!-- end title -->
+			
+		
+			
+            <div class="gallery-container">
+                <h2>Saç Kesimi</h2>
+                <p>Görselleri keşfedin ve büyük versiyonlarına göz atın.</p>
+            
+                <div class="gallery" id="gallery1">
+                    <div class="gallery-item">
+                        <img src="images/beyaz_logo.png" alt="Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-02.jpg" alt="Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-03.jpg" alt="Image 3">
+                    </div>
+                </div>
+            
+                <div class="gallery-controls">
+                    <button class="prev" data-gallery="gallery1"><i class="fa fa-chevron-left"></i></button>
+                    <button class="next" data-gallery="gallery1"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="gallery-container">
+                <h2>Saç Boyama</h2>
+                <p>Görselleri keşfedin ve büyük versiyonlarına göz atın.</p>
+            
+                <div class="gallery" id="gallery2">
+                    <div class="gallery-item">
+                        <img src="images/beyaz_logo_new.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-02.jpg" alt="Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-03.jpg" alt="Image 3">
+                    </div>
+                </div>
+            
+                <div class="gallery-controls">
+                    <button class="prev" data-gallery="gallery2"><i class="fa fa-chevron-left"></i></button>
+                    <button class="next" data-gallery="gallery2"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="gallery-container">
+                <h2>Saç Ekimi</h2>
+                <p>Görselleri keşfedin ve büyük versiyonlarına göz atın.</p>
+            
+                <div class="gallery" id="gallery3">
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-01.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-02.jpg" alt="Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-03.jpg" alt="Image 3">
+                    </div>
+                </div>
+            
+                <div class="gallery-controls">
+                    <button class="prev" data-gallery="gallery3"><i class="fa fa-chevron-left"></i></button>
+                    <button class="next" data-gallery="gallery3"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="gallery-container">
+                <h2>Cilt Bakımı</h2>
+                <p>Görselleri keşfedin ve büyük versiyonlarına göz atın.</p>
+            
+                <div class="gallery" id="gallery4">
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-01.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-02.jpg" alt="Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="uploads/gallery_img-03.jpg" alt="Image 3">
+                    </div>
+                </div>
+            
+                <div class="gallery-controls">
+                    <button class="prev" data-gallery="gallery4"><i class="fa fa-chevron-left"></i></button>
+                    <button class="next" data-gallery="gallery4"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+		
+			</div>
+		</div>
+
+
+
+        
+	</div>
+	
+	 <div id="testimonials" class="section wb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Google Yorumları</h3>
+                <p>Yorumlarınız için teşekkür ederiz. Yeniden gelmeniz dileğiyle... </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Teşekkürler!</h3>
+                                <p class="lead">Model tarzları güzel güler yüzlü temiz sakal modelleri çok iyi fiyat uygun ellerine sağlık çok alakalı teşekkürler.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img style="border-radius: 15px;" src="images/users_icon.png" alt="" class="img-fluid alignleft">
+                                <h4>Ramazan Özdemir  <small>- Bayrampaşa</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Güler Yüzlü Hizmet!</h3>
+                                <p class="lead">Çok sağlıklı güzel iş yeri güler yüzlü hizmet çok kaliteli çok güzel hizmet sunduğu için Hüseyin Yılmaz'a teşekkürlerimi sunarım.</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img style="border-radius: 15px;" src="images/users_icon.png" alt="" class="img-fluid alignleft">
+                                <h4>Ayhan Balcı <small>- Bayrampaşa</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Profesyonel...</h3>
+                                <p class="lead">Profesyonel saç kesimi teşekkürler. </p>
+                            </div>
+                            <div class="testi-meta">
+                                <img style="border-radius: 15px;" src="images/users_icon.png" alt="" class="img-fluid alignleft">
+                                <h4>Kemal Korkmaz <small>- Bayrampaşa</small></h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                      
+                      
+                     
+
+                       
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div id="blog" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3 class="text-center">Blog</h3>
+                <div class="animated-text">
+                    <span>K</span><span>u</span><span>a</span><span>f</span><span>ö</span><span>r</span>
+                    <span> </span><span>m</span><span>a</span><span>l</span><span>z</span><span>e</span><span>m</span><span>e</span><span>l</span><span>e</span><span>r</span><span>i</span>
+                    <span> </span><span>h</span><span>a</span><span>k</span><span>k</span><span>ı</span><span>n</span><span>d</span><span>a</span>
+                    <span> </span><span>b</span><span>i</span><span>l</span><span>g</span><span>i</span>
+                    <span> </span><span>s</span><span>a</span><span>h</span><span>i</span><span>p</span>
+                    <span> </span><span>o</span><span>l</span><span>u</span><span>n</span><span>.</span>
+                </div>
+            </div><!-- end title -->
+			
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="uploads/blog-01.jpg" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>Şampuan</span>
+								<span>Türleri</span>
+							</div>
+						</div>
+						<div class="post-info">
+							<h4>Hangi saç türüne hangi şampuan kullanılmalı</h4>
+							<ul>
+                                <li>By Hüseyin Yılmaz</li>
+                                <li>24 Aralık 2024</li>
+                                <li><a href="#"><b> Ürün Linkleri</b></a></li>
+                            </ul>
+							<p>Yağlı saçları ayrı kuru saçlarsa ayrı şampuan kullanıldığı gibi seyrek ve gür saçlar içinde özel şampuanlar üretilmiştir.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="uploads/blog-02.jpg" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>Traş</span>
+								<span>Makinaları</span>
+							</div>
+						</div>
+						<div class="post-info">
+							<h4>Cilt tipine göre traş makinası</h4>
+							<ul>
+                                <li>By Hüseyin Yılmaz</li>
+                                <li>25 Aralık, 2024</li>
+                                <li><a href="#"><b> Ürün linkleri</b></a></li>
+                            </ul>
+							<p>Cildinizi Tahriş etmeyen traş makinaları tercih etmeniz sizin açınızdan yıpranmamış bir cilt olarak geri dönücektir</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="uploads/blog-03.jpg" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>Ustra</span>
+								<span>Seçimi</span>
+							</div>
+						</div>
+						<div class="post-info">
+							<h4>Derinizi kesmemek adına ustra seçimi önemlidir</h4>
+							<ul>
+                                <li>By Hüseyin Yılmaz</li>
+                                <li>24 Aralık, 2024</li>
+                                <li><a href="#"><b> Ürün linkleri</b></a></li>
+                            </ul>
+							<p>Tek bıçak 2 bıçak ve 3 bıçak gibi farklı bıçak türleri cilt sağlığınız açısından önem arz eder</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+    <div id="contact" class="section db animate-up">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3 style="color: black;" class="text-center">İletişim</h3>
+                <p style="color: black;">Aşağıdaki numaralardan bizimle iletişime geçebilirsiniz</p>
+            </div><!-- end title -->
+            <div class="border-box">
+            <span>
+                <h3 style="color: black;" class="text-center">Adres</h3>
+                <h4>Orta, Sakarya Sk. 2 C, 34040 Bayrampaşa/İstanbul</h4>
+                <h4>Telefon : (532) 761 39-77  </h4>
+                <h4>Mail : beyazkuafor@outlook.com</h4>
+            </span>
+          </div>
+        </div><!-- end container -->
+    </div><!-- end section -->
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="#home">Anasayfa</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#about">Hakkımızda</a>
+                        <a href="#contact">İletişim</a>
+                    </p>
+                    <p class="footer-company-name">Tüm Hakları Saklıdır. &copy; 2024 <a href="#">Beyaz Kuaför</a> Design By : 
+					<a href="https://www.instagram.com/muhammed_0367/">@MuhammedOzbek</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+	<!-- Camera Slider -->
+	<script src="js/jquery.mobile.customized.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script> 
+	<script src="js/parallaxie.js"></script>
+	<script src="js/headline.js"></script>
+	<!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.vide.js"></script>
+
+    <script>
+  
+  $(document).ready(function () {
+    // Her bir galeriyi bağımsız olarak çalıştırıyoruz
+    $('.gallery').each(function () {
+        var galleryId = $(this).attr('id'); // Galeri id'sini alıyoruz
+        var currentIndex = 0;
+        var totalImages = $(this).find('.gallery-item').length;
+
+        // İlk görseli göster
+        $('#' + galleryId).find('.gallery-item').eq(currentIndex).show();
+
+        // "Sonraki" butonuna tıklama
+        $('.next[data-gallery="' + galleryId + '"]').click(function () {
+            // Geçerli görseli gizle
+            $('#' + galleryId).find('.gallery-item').eq(currentIndex).hide();
+
+            // Index'i bir artır
+            currentIndex = (currentIndex + 1) % totalImages;
+
+            // Yeni görseli göster
+            $('#' + galleryId).find('.gallery-item').eq(currentIndex).show();
+        });
+
+        // "Önceki" butonuna tıklama
+        $('.prev[data-gallery="' + galleryId + '"]').click(function () {
+            // Geçerli görseli gizle
+            $('#' + galleryId).find('.gallery-item').eq(currentIndex).hide();
+
+            // Index'i bir azalt
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+
+            // Yeni görseli göster
+            $('#' + galleryId).find('.gallery-item').eq(currentIndex).show();
+        });
+    });
+});
+$(document).ready(function () {
+    // Görünürlük kontrol fonksiyonu
+    function checkVisibility() {
+        var windowHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+
+        $('.gallery-container').each(function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+
+            // Eğer galeri görünürse, animasyonu başlat
+            if (scrollTop + windowHeight > elementTop && scrollTop < elementBottom && !$(this).hasClass('visible')) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    // Sayfa yüklendiğinde kontrol et
+    checkVisibility();
+
+    // Scroll olayını debouncing ile bağla
+    var debounce = function (func, wait) {
+        var timeout;
+        return function () {
+            clearTimeout(timeout);
+            timeout = setTimeout(func, wait);
+        };
+    };
+
+    $(window).on('scroll', debounce(checkVisibility, 100));
+});
+
+    // Scroll bazlı animasyon fonksiyonu
+    function handleScroll() {
+            const elements = document.querySelectorAll('.animate-up');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(el => {
+                const positionFromTop = el.getBoundingClientRect().top;
+
+                if (positionFromTop - windowHeight <= -50) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        // Scroll olayını dinleyelim
+        window.addEventListener('scroll', handleScroll);
+
+        // Sayfa yüklenirken bir kez kontrol edelim
+        handleScroll();
+
+            // Intersection Observer API ile animasyonu kontrol et
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // Görünürlük kaybolduğunda animasyonu sıfırla
+                }
+            });
+        });
+
+        // Tüm "animate-up" elemanlarını izle
+        const elements = document.querySelectorAll('.animate-up');
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
